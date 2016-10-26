@@ -17,6 +17,9 @@ gem 'annotate'
 # Install bootstrap responsive framework
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# Install hirb gem
+gem 'hirb'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
