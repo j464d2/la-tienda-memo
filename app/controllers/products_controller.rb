@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      flash[:notice] = 'Store was successfully updated.'
+      flash[:notice] = 'The product was successfully updated.'
       redirect_to product_path(id: @product.id, it_was: 'updated')
     else
       render :edit
