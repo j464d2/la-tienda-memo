@@ -20,6 +20,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Install hirb gem
 gem 'hirb'
 
+# Install devise gem
+gem 'devise'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
