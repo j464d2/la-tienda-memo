@@ -16,8 +16,10 @@ class PurchasesController < ApplicationController
     else
       flash[:alert] = 'No ha sido posible agregar este producto a tus compras, intenta de nuevo'
     end
-
     redirect_to root_path(category_id: product.category_id)
   end
 
+  def dashboard
+    @users = User.where(role: :client)
+  end
 end

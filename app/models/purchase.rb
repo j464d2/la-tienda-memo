@@ -17,4 +17,20 @@ class Purchase < ApplicationRecord
 
   # Enum
   enum status: [ :pending, :paid ]
+
+  # Method to get the number of purchases depending on type
+  def self.number_of_purchases(user, status)
+    if status == 'pending'
+      user.purchases.where(status: :pending).count
+    elsif status == 'paid'
+      user.purchases.where(status: :paid).count
+    else
+      -1
+    end
+  end
+
+  # Method to calculate user balance
+  def self.balance(user)
+    user.purchases.where(status: :pending).sum(&:price)
+  end
 end
