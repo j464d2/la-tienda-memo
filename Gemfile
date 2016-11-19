@@ -19,6 +19,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # Install hirb gem
 gem 'hirb'
+# Install ransack gem
+gem 'ransack'
 
 # Install devise gem
 gem 'devise'

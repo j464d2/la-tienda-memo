@@ -7,7 +7,7 @@ class PagesController < ApplicationController
       @products = Category.find(params[:category_id]).products
       # @products = Product.where(category_id: params[:category_id])
     else
-      @products = Product.all.shuffle[0..5]
+      @products = @q.result(distinct: true)
     end
   end
 
